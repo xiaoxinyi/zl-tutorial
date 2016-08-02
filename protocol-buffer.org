@@ -47,7 +47,7 @@ protoc -I=$SRC_DIR --cpp_out=$DST_DIR $SRC_DIR/addressbook.proto
 
 如果你使用 =C++= ，可以用 =protoc= 编译上面的 =addressbook.proto= 文件,
 可以生成一个 =Person= 类，可以如下使用这个类：
-h#+BEGIN_SRC c++
+#+BEGIN_SRC c++
 Person person;
 person.set_name("John Doe");
 person.set_id(1234)
