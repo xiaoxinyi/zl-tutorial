@@ -62,7 +62,7 @@ person.ParseFromIstream(&input);
 cout << "Name: " << person.name() << endl;
 cout << "E-mail: " << person.email() << endl;
 #+END_SRC 
-你还可以增加新的属性，但是当你=parse=旧的序列化的文件时，需要忽略那些新增加的属性
+你还可以增加新的属性，但是当你 =parse= 旧的序列化的文件时，需要忽略那些新增加的属性
 
 ** 为什么不用XML
 在序列化数据方面，Protocol buffers比起XML有很多优势：
