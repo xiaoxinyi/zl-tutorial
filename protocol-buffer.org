@@ -6,7 +6,7 @@ Protocol buffers 是一种简单高效，可以自动[[https://en.wikipedia.org/
 Python等等。
 
 ** protocol buffers 是怎样工作的
-1. 在=.proto=文件中定义 =message type= ，有点像面向对象设计中的实体类。
+1. 在 =.proto= 文件中定义 =message type= ，有点像面向对象设计中的实体类。
    一下是一个简单的例子： =addressbook.proto=
 #+BEGIN_SRC example
 message Person {
@@ -47,7 +47,7 @@ protoc -I=$SRC_DIR --cpp_out=$DST_DIR $SRC_DIR/addressbook.proto
 
 如果你使用 =C++= ，可以用 =protoc= 编译上面的 =addressbook.proto= 文件,
 可以生成一个 =Person= 类，可以如下使用这个类：
-#+BEGIN_SRC c++
+h#+BEGIN_SRC c++
 Person person;
 person.set_name("John Doe");
 person.set_id(1234)
