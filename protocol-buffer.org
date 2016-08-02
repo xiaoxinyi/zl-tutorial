@@ -28,14 +28,14 @@ message Person {
   repeated PhoneNumber phone = 4;
 }
 #+END_SRC
-- 每一个=message type=都有一个或者多个唯一标号的属性（field）
+- 每一个 =message type= 都有一个或者多个唯一标号的属性（field）
 - 每一个属性都有一个名字和一个值类型
 - 类型可以是数字（integer或floating-point），boolean, string, raw
   bytes, 甚至是别的 =protocol buffer message types= （如上例所示），这样
   就允许你层次地组织你的数据结构
 - 修饰性的关键词 =optional=, =required=, =repeated=
-2. 一旦定义好 =messages= ，用protocol buffer的编译器 =protoc=，把=.proto=
-   文件转换为可以访问的类。这些类提供简单的*访问器*，如
+一旦定义好 =messages= ，用protocol buffer的编译器 =protoc= ，把
+   =.proto= 文件转换为可以访问的类。这些类提供简单的*访问器*，如
    （ =name()=, =set_name()= ），还提供了一些序列化的方法
    （ =serialize/parse= ）读写这些 =raw bytes= 。
 #+BEGIN_SRC bash
